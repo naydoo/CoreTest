@@ -8,7 +8,6 @@ namespace Tests
 {
     public class Tests
     {
-        public IWebDriver driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
         [SetUp]
         public void Setup()
         {
@@ -18,7 +17,7 @@ namespace Tests
         [Test]
         public void Test1()
         {
-            driver.FindElement(By.Name("q")).SendKeys("test");
+            driver.FindElement(By.Name("q")).SendKeys("test"); 
             driver.Close();
             driver.Quit();
         }
